@@ -12,7 +12,7 @@ jobs:
 
       - name: Check if README.md exists
         run: |
-          if [ -f "README.md","readme.md" ]; then
+          if [ -f "README.md" ] || [-f "readme.md"]; then
             echo "✅ README.md found."
           else
             echo "❌ README.md is missing!"
