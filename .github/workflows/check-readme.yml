@@ -10,10 +10,10 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Check if README.md exists
+      - name: Check if README.md (any case) exists
         run: |
-          if [ -f "README.md" ] || [-f "readme.md"]; then
-            echo "✅ README.md found."
+          if [ -f "README.md" ] || [ -f "readme.md" ]; then
+            echo "✅ README file found."
           else
             echo "❌ README.md is missing!"
             exit 1
